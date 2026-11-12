@@ -849,3 +849,48 @@ h3 { font-size: 1.45rem; font-weight: 700; line-height: 1.1; }
   .marquee-track { animation: none; }
   .marquee { overflow-x: auto; }
 }
+
+/* ---------- Fond principal bleu-gris (à la place du blanc) ---------- */
+
+:root { --page: #6d83a3; --on-page: #f1f4f8; }
+body { background: var(--page); }
+.site-header { background: rgba(109, 131, 163, 0.97); }
+.site-header .wrap { border-bottom-color: rgba(255, 255, 255, 0.25); }
+.main-nav a.nav-link { color: #e8edf4; }
+.main-nav a.nav-link:hover,
+.main-nav a.nav-link[aria-current="page"] { color: var(--navy-3); }
+.brand-name small { color: #e8edf4; }
+.icon-btn { border-color: rgba(255, 255, 255, 0.4); }
+
+.hero .lead,
+.service-hero .lead,
+.contact-hero .lead,
+.cta-center p,
+.proofs span,
+.breadcrumb,
+.zone dt,
+.section-head p:not(.eyebrow),
+.legal p:not(.eyebrow),
+.legal dt { color: var(--on-page); }
+.breadcrumb strong { color: var(--navy-3); }
+.hero .accent,
+.contact-hero .accent { color: var(--white); }
+.eyebrow,
+.note,
+.service-hero .kicker { color: var(--white); }
+.bg-beige .eyebrow { color: var(--orange-dark); }
+.proofs { border-top-color: rgba(255, 255, 255, 0.3); }
+.btn-outline { border-color: var(--navy-3); color: var(--navy-3); }
+.zone dl div,
+.legal dl,
+.legal dl div,
+.other-services a,
+.contact-card { border-color: rgba(255, 255, 255, 0.35); }
+.contact-card:not(.featured) { background: var(--white); }
+.legal p a, .legal dd a { color: var(--navy-3); }
+
+@media (max-width: 860px) {
+  .main-nav { background: var(--page); }
+  .main-nav a.nav-link { border-bottom-color: rgba(255, 255, 255, 0.25); }
+  .menu-toggle { background: transparent; border-color: rgba(255, 255, 255, 0.4); }
+}
