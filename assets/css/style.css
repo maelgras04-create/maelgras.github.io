@@ -527,7 +527,7 @@ h3 { font-size: 1.45rem; font-weight: 700; line-height: 1.1; }
 .gallery .main { grid-row: 1 / 3; }
 .gallery > *,
 .gallery .before-after > * { min-width: 0; min-height: 0; }
-.gallery .media img { position: absolute; inset: 0; }
+.gallery .media img { position: absolute; top: 0; left: 0; inset: 0; }
 .gallery.gallery-pair {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
@@ -903,4 +903,24 @@ body { background: var(--page); }
   .main-nav { background: var(--page); }
   .main-nav a.nav-link { border-bottom-color: rgba(255, 255, 255, 0.25); }
   .menu-toggle { background: transparent; border-color: rgba(255, 255, 255, 0.4); }
+}
+
+/* ---------- Anciens navigateurs (Safari < 15) sans aspect-ratio ---------- */
+
+@supports not (aspect-ratio: 1 / 1) {
+  .gallery,
+  .gallery.gallery-pair { height: 46vw; max-height: 566px; }
+  .hero .media { height: 600px; }
+  .service-hero .media { height: 560px; }
+  .service-card .media { height: 280px; }
+  @media (max-width: 860px) {
+    .gallery { height: auto; max-height: none; }
+    .gallery .main { height: 72vw; }
+    .gallery > .media:not(.main) { height: 44vw; }
+    .gallery .before-after,
+    .gallery.gallery-pair { height: 44vw; }
+    .hero .media,
+    .service-hero .media { height: 72vw; }
+    .service-card .media { height: 60vw; }
+  }
 }
