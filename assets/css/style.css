@@ -528,6 +528,13 @@ h3 { font-size: 1.45rem; font-weight: 700; line-height: 1.1; }
 .gallery > *,
 .gallery .before-after > * { min-width: 0; min-height: 0; }
 .gallery .media img { position: absolute; inset: 0; }
+.gallery.gallery-pair {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  aspect-ratio: 2 / 1;
+  margin-top: 10px;
+}
+.gallery.gallery-pair .before-after { grid-column: 1 / -1; }
 .gallery .before-after {
   grid-column: 2 / 4;
   display: grid;
